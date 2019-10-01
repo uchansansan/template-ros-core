@@ -1,10 +1,12 @@
-# Template: template-ros
+# Template: template-ros-core
 
 This template provides a boilerplate repository
 for developing ROS-based software in Duckietown.
 
 **NOTE:** If you want to develop software that does not use
 ROS, check out [this template](https://github.com/duckietown/template-basic).
+
+**NOTE:** This template builds on all of the packages [the dt-core repo](https://github.com/duckietown/dt-core). If you want to build an image without any of the packages in `dt-core` then use [the template-ros repo](https://github.com/duckietown/template-ros)
 
 
 ## How to use it
