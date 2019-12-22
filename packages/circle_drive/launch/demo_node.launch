@@ -1,0 +1,3 @@
+<launch>
+	<node name="circle_drive" pkg="circle_drive" type="circle_drive.py" output="screen" required="true"/>
+</launch>
