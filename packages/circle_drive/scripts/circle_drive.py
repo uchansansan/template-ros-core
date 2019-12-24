@@ -8,7 +8,7 @@ class MyNode(DTROS):
 
     def __init__(self, node_name):
         super(MyNode, self).__init__(node_name=node_name)
-        self.pub = rospy.Publisher("~/car_cmd", Twist2DStamped, queue_size=1)
+        self.pub = rospy.Publisher("~car_cmd", Twist2DStamped, queue_size=1)
 
     def run(self):
         # publish message every 1 second
