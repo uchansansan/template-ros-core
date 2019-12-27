@@ -12,7 +12,7 @@ class MyNode(DTROS):
 
     def run(self):
         # publish message every 1 second
-        rate = rospy.Rate(1) # 1Hz
+        rate = rospy.Rate(0.5) # 1Hz
         while not rospy.is_shutdown():
             msg = Twist2DStamped()
             msg.v = 0.0
@@ -20,7 +20,7 @@ class MyNode(DTROS):
             rospy.loginfo("Publishing message")
             self.pub.publish(msg)
             rate.sleep()
-            msg.omega = -0.5
+            msg.omega = 0.0
             rospy.loginfo("Publishing message -")
             self.pub.publish(msg)
             rate.sleep()
