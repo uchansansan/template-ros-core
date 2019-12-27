@@ -49,7 +49,9 @@ CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <==================================================
 RUN ls -la
 RUN pwd
-COPY dt-core "${CATKIN_WS_DIR}/src/"
+COPY ./qwe "${CATKIN_WS_DIR}/src/"
+COPY ./dt-core "${CATKIN_WS_DIR}/src/"
+
 
 
 
