@@ -36,6 +36,9 @@ RUN pip install -r ${REPO_PATH}/dependencies-py.txt
 # copy the source code
 COPY . "${REPO_PATH}/"
 
+RUN cp -r "${REPO_PATH}/dt-core" "${CATKIN_WS_DIR}/src/"
+RUN rm -r "${REPO_PATH}/dt-core"
+
 # build packages
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
   catkin build \
@@ -48,8 +51,6 @@ ENV LAUNCHFILE "${REPO_PATH}/launch.sh"
 CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
-RUN pwd
-COPY ./dt-core "${CATKIN_WS_DIR}/src/"
 
 
 
