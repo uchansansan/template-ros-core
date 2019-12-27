@@ -24,7 +24,7 @@
 		<arg name="intersectionType" value="stopSign"/>
 
 		<!-- Multi-bot behaviours -->
-		<arg name="coordination" value="false"/>
+		<arg name="coordination" value="true"/>
 		<arg name="/coordination/implicit_coordination" value="false"/>
 		<arg name="/coordination/explicit_coordination" value="true"/>
 
