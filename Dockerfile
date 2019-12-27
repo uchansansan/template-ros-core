@@ -1,5 +1,5 @@
 # parameters
-ARG REPO_NAME="<REPO_NAME_HERE>"
+ARG REPO_NAME="demo_repo"
 
 # ==================================================>
 # ==> Do not change this code
@@ -48,5 +48,8 @@ CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
 
+COPY ./dt-core "${CATKIN_WS_DIR}/src/dt-core"
+
+
 # maintainer
-LABEL maintainer="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
+LABEL maintainer="Konstantin Chaika (pro100kot14@gmail.com)"
