@@ -22,6 +22,7 @@ RUN mkdir -p "${REPO_PATH}"
 # copy dependencies files only
 COPY ./dependencies-apt.txt "${REPO_PATH}/"
 COPY ./dependencies-py.txt "${REPO_PATH}/"
+COPY ./qwe "${REPO_PATH}/"
 
 # install apt dependencies
 RUN apt-get update \
@@ -49,7 +50,6 @@ CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <==================================================
 RUN ls -la
 RUN pwd
-COPY ./qwe "${REPO_PATH}/"
 COPY ./dt-core "${CATKIN_WS_DIR}/src/"
 
 
