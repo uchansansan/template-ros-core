@@ -22,8 +22,8 @@ RUN mkdir -p "${REPO_PATH}"
 # copy dependencies files only
 COPY ./dependencies-apt.txt "${REPO_PATH}/"
 COPY ./dependencies-py.txt "${REPO_PATH}/"
-COPY ./qwe "${REPO_PATH}/"
 RUN git status
+COPY ./qwe "${REPO_PATH}/"
 
 # install apt dependencies
 RUN apt-get update \
