@@ -36,8 +36,8 @@ RUN pip install -r ${REPO_PATH}/dependencies-py.txt
 # copy the source code
 COPY . "${REPO_PATH}/"
 
-RUN cp -r "${REPO_PATH}/dt-core" "${CATKIN_WS_DIR}/src/"
-RUN rm -r "${REPO_PATH}/dt-core"
+RUN cp -r "${REPO_PATH}/packages/dt-core" "${CATKIN_WS_DIR}/src/"
+RUN rm -r "${REPO_PATH}/packages/dt-core"
 
 # build packages
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
