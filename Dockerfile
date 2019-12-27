@@ -48,7 +48,7 @@ CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
 
-COPY ./dt-core "${CATKIN_WS_DIR}/src/"
+COPY dt-core "${CATKIN_WS_DIR}/src/"
 
 
 
