@@ -47,7 +47,8 @@ ENV LAUNCHFILE "${REPO_PATH}/launch.sh"
 CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
-
+RUN ls -la
+RUN pwd
 COPY dt-core "${CATKIN_WS_DIR}/src/"
 
 
