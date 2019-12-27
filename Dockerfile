@@ -23,8 +23,6 @@ RUN mkdir -p "${REPO_PATH}"
 COPY ./dependencies-apt.txt "${REPO_PATH}/"
 COPY ./dependencies-py.txt "${REPO_PATH}/"
 
-COPY ./dt-core "${CATKIN_WS_DIR}/src/dt-core"
-
 # install apt dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -49,6 +47,8 @@ ENV LAUNCHFILE "${REPO_PATH}/launch.sh"
 CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
+
+COPY ./dt-core "${CATKIN_WS_DIR}/src/"
 
 
 
