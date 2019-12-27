@@ -20,10 +20,9 @@ WORKDIR "${REPO_PATH}"
 RUN mkdir -p "${REPO_PATH}"
 
 # copy dependencies files only
+RUN ls -la
 COPY ./dependencies-apt.txt "${REPO_PATH}/"
 COPY ./dependencies-py.txt "${REPO_PATH}/"
-RUN git status
-COPY ./qwe "${REPO_PATH}/"
 
 # install apt dependencies
 RUN apt-get update \
@@ -49,7 +48,6 @@ ENV LAUNCHFILE "${REPO_PATH}/launch.sh"
 CMD ["bash", "-c", "${LAUNCHFILE}"]
 # <== Do not change this code
 # <==================================================
-RUN ls -la
 RUN pwd
 COPY ./dt-core "${CATKIN_WS_DIR}/src/"
 
