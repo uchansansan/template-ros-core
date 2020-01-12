@@ -1,5 +1,5 @@
 #default parameters for stop_line_filter/stop_line_filter_node
-stop_distance: 0.05
+stop_distance: 0.15
 min_segs: 6
 off_time: 2
 max_y: 0.2
