@@ -13,7 +13,7 @@ k_Id: 1
 k_Iphi: 0.0
 theta_thres: 0.523
 d_thres: 0.2615
-d_offset: -20.0
+d_offset: -0.5
 
 # LP copying these into here for now since they are loaded from the lane_controller
 #default parameters for dagu_car/wheels_driver_node 
