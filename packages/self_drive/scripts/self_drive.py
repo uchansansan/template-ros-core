@@ -117,9 +117,9 @@ class Controller:
             #     while (robot_driver.turning()):
 
 
-road_img = cv.imread('graph.jpg', 1)
-controller = Controller(road_img)
-rospy.init_node('RobotDriver')
+#road_img = cv.imread('graph.jpg', 1)
+#controller = Controller(road_img)
+rospy.init_node('self_drive')
 rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
 rospy.spin()
     #        
