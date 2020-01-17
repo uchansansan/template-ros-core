@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>circle_drive</name>
+  <name>self_drive</name>
   <version>0.0.0</version>
-  <description>circle_drive package</description>
+  <description>self_drive package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
