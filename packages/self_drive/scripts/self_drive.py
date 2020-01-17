@@ -2,7 +2,7 @@
 import rospy
 import cv2 as cv
 from duckietown_msgs.msg import Twist2DStamped
-import Road_map
+import Roadmap
 import GUI
 
 current_milli_time = lambda: int(round(time.time()*1000))
