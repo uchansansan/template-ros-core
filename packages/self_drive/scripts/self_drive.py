@@ -19,7 +19,7 @@ class RobotInfo:
 
 class Controller:
 	def __init__(self, read_img):
-		self.road_map = Road_map(road_img,x=0,y=0)
+		self.road_map = Roadmap(road_img,x=0,y=0)
 		self.gui = GUI()
 		self.first = True
 	def run_dyty_cycle(self, time_stamp, info):
