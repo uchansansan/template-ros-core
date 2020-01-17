@@ -5,12 +5,8 @@ from duckietown_msgs.msg import Twist2DStamped
 import Road_map
 import GUI
 
-current_milli_time = lambda: int(round(time.time()*1000))
-
 def RobotListener(msg):
 	rospy.loginfo('%s',str(msg))
-	controller.run_dyty_cycle(current_milli_time(), RobotInfo(msg.v, msg.omega))
-
 
 class RobotInfo:
 	def __init__(self, v, omega):
