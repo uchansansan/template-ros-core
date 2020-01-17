@@ -1,0 +1,7 @@
+<launch>
+	<arg name="veh" default="$(env VEHICLE_NAME)"/>
+	<group ns="$(arg veh)">
+		
+		<node name="self_drive" pkg="circle_drive" type="self_drive.py" output="screen" required="true"/>
+	</group>
+</launch>
