@@ -2,7 +2,7 @@
 import rospy
 import cv2 as cv
 from duckietown_msgs.msg import Twist2DStamped
-import Roadmap
+import Road_map 
 import GUI
 
 current_milli_time = lambda: int(round(time.time()*1000))
@@ -19,8 +19,8 @@ class RobotInfo:
 
 class Controller:
 	def __init__(self, read_img):
-		self.road_map = Roadmap(road_img,x=0,y=0)
-		self.gui = GUI()
+		self.road_map = Road_map.Roadmap(road_img,x=0,y=0)
+		self.gui = GUI.GUI()
 		self.first = True
 	def run_dyty_cycle(self, time_stamp, info):
 	 	if self.first == True:
