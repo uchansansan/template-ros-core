@@ -1,5 +1,5 @@
-#! /usr/bin/env python
-import rospy 
+#!/usr/bin/env python
+import rospy
 import cv2 as cv
 import time
 from duckietown_msgs.msg import Twist2DStamped
