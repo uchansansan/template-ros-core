@@ -70,7 +70,7 @@ class Roadmap():
 				x1 = int(math.ceil(x1 + round(x2)))
 				y1 = int(math.ceil(y1 - round(y2)))
 				distance1 = int(math.ceil(distance2))
-			else if (alpha_robot != numpy.pi / 2) and (alpha_robot != 3*numpy.pi / 2):	
+			elif (alpha_robot != numpy.pi / 2) and (alpha_robot != 3*numpy.pi / 2):	
 				distance3 = int(math.ceil((distance2-distance1) / math.sin(alpha_robot)))
 				x2 = int(math.ceil(distance3 * math.sin(alpha_robot)))
 				y2 = int(math.ceil(distance3 * math.cos(alpha_robot)))
