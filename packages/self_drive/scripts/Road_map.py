@@ -11,7 +11,10 @@ class Roadmap():
 	def setTrace(self, time, alpha_robot, last_v, v):
 		rospy.loginfo('%s',str("setTrace-ALLAH"))
 		x_line1,y_line1,x_line2,y_line2 = self.getTangent()
-		alpha_line = (y_line1 - y_line2) / (x_line1 - x_line2)
+		try:
+			alpha_line = (y_line1 - y_line2) / (x_line1 - x_line2)
+		except ZeroDivisionError:
+			alpha_line = (y_line1 - y_line2)
 		distance1 = last_v
 		distance2 = v
 		if alpha_robot == numpy.pi / 2:
