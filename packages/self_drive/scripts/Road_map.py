@@ -12,6 +12,7 @@ class Roadmap():
 		return 0,1,0,3
 	def setTrace(self, time, alpha_robot, last_v, v):
 		rospy.loginfo('%s',str("setTrace-ALLAH"))
+		img = self.img
 		x_line1,y_line1,x_line2,y_line2 = self.getTangent()
 		try:
 			alpha_line = (y_line1 - y_line2) / (x_line1 - x_line2)
