@@ -79,7 +79,7 @@ class Roadmap():
 				x1 = int(math.ceil(x1 - round(x2)))
 				y1 = int(math.ceil(y1 - round(y2)))
 				distance1 = int(math.ceil(distance2))
-	cv.imwrite("/data/road_map.jpg", img)
+	cv.imwrite("/data/road_map.jpg", self.img)
 
 		#img update
 
