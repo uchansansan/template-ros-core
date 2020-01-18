@@ -1,4 +1,5 @@
 import rospy
+import numpy
 class Roadmap():
 	def  __init__(self, read_img, x, y):
 		#parse_map_img(read_img)
