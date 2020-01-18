@@ -15,7 +15,8 @@ class Roadmap():
 		rospy.loginfo('%s',str("setTrace-ALLAH"))
 		img = self.img
 		x_line1,y_line1,x_line2,y_line2 = self.getTangent()
-		x1, y1 = 250,250
+		x1= 250
+		y1= 250
 		try:
 			alpha_line = (y_line1 - y_line2) / (x_line1 - x_line2)
 		except ZeroDivisionError:
