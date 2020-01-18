@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import rospy
+import time
 import cv2 as cv
 from duckietown_msgs.msg import Twist2DStamped
 from Road_map import *
