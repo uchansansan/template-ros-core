@@ -7,3 +7,5 @@ class GUI:
 	def redraw(self, road_map):
 		rospy.loginfo('%s',str("redraw-ALLAH"))
 		cv.imwrite("/data/road_map.jpg", road_map.getTrace())
+		cv.imshow('road_map.jpg', road_map.getTrace())
+		cv.waitKey(0)
