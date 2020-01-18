@@ -45,8 +45,8 @@ class Controller:
 
 
 
-#read_img = cv.imread('graph.jpg',1)
-#controller = Controller(read_img)
+read_img = cv.imread('graph.jpg',1)
+controller = Controller(read_img)
 rospy.init_node('self_drive')
 listener = rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
 
