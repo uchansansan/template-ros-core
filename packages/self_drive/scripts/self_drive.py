@@ -20,7 +20,7 @@ class RobotInfo:
 
 class Controller:
 	def __init__(self, read_img):
-
+		rospy.loginfo('%s',str(msg))
 		self.road_map = Roadmap(read_img,x=0,y=0)
 		self.gui = GUI()
 		self.first = True
@@ -29,10 +29,11 @@ class Controller:
 		self.mutex = threading.Lock()
 
 	def run_dyty_cycle(self, time_stamp, info):
+		rospy.loginfo('%s',str(msg))
 	 	if self.first == True:
 	 		last_step_info = info
 	 		last_time_stamp = time_stamp
-	 		self. first = False
+	 		self.first = False
 	 		return
 	 	self.road_map.setTrace(time_stamp - last_time_stamp, last_step_info.omega, last_step_info.v, info.v)
 	 	last_time_stamp = time_stamp
