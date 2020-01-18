@@ -42,16 +42,16 @@ class Roadmap():
 		if distance1 > distance2 and alpha_robot != numpy.pi / 2 and alpha_robot != 3*numpy.pi / 2:	
 			if alpha_line == numpy.pi / 2:
 				distance3 = (distance1-distance2) / math.sin(alpha_robot)
-				x2 = distance3 * math.cos(alpha_robot)
-				y2 = distance3 * math.sin(alpha1)
+				x2 = math.ceil(distance3 * math.cos(alpha_robot))
+				y2 = math.ceil(distance3 * math.sin(alpha1))
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 + round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
 				distance1 = distance2
 			else:
 				distance3 = (distance1-distance2) / math.sin(alpha_robot)
-				x2 = distance3 * math.sin(alpha_robot)
-				y2 = distance3 * math.cos(alpha_robot)
+				x2 = math.ceil(distance3 * math.sin(alpha_robot))
+				y2 = math.ceil(distance3 * math.cos(alpha_robot))
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
@@ -59,16 +59,16 @@ class Roadmap():
 		if distance1 < distance2 and alpha_robot != numpy.pi / 2 and alpha_robot != 3*numpy.pi / 2:
 			if alpha_line == numpy.pi / 2 and alpha_robot != numpy.pi / 2:
 				distance3 = (distance2-distance1) / math.sin(alpha_robot)
-				x2 = distance3 * math.cos(alpha_robot)
-				y2 = distance3 * math.sin(alpha_robot)
+				x2 = math.ceil(distance3 * math.cos(alpha_robot))
+				y2 = math.ceil(distance3 * math.sin(alpha_robot))
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
 				distance1 = distance2
 			elif alpha_robot != numpy.pi / 2 and alpha_robot != 3*numpy.pi / 2:	
 				distance3 = (distance2-distance1) / math.sin(alpha_robot)
-				x2 = distance3 * math.sin(alpha_robot)
-				y2 = distance3 * math.cos(alpha_robot)
+				x2 = math.ceil(distance3 * math.sin(alpha_robot))
+				y2 = math.ceil(distance3 * math.cos(alpha_robot))
 				cv.line(img, (x1, y1), (x1 - round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 - round(x2)
 				y1 = y1 - round(y2)
