@@ -5,4 +5,4 @@ class GUI:
 	def __init__(self):
 		pass
 	def redraw(self, road_map):
-		cv.imwrite("road_map.png", road_map.getTrace())
+		cv.imwrite("/usr/road_map.png", road_map.getTrace())
