@@ -74,6 +74,6 @@ class Roadmap():
 
 
 
-	def getTrace():
+	def getTrace(self):
 		rospy.loginfo('%s',str("getTrace-ALLAH"))
 		return self.img
