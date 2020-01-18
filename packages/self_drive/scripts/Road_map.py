@@ -38,7 +38,7 @@ class Roadmap():
 					cv.line(img, (x1, y1), (x1 + 20, y1), (255, 0, 0), 2)
 					x1 = math.ceil(x1 + 20)
 			else:
-				cv.line(img, (math.ceil(x1), math.ceil(y1)), (math.ceil(x1), math.ceil(y1 - 20)), (255, 0, 0), 2)
+				cv.line(img, (math.ceil(x1), math.ceil(y1)), (math.ceil(x1), math.ceil(y1 - 20)), (255, 0, 0), 2, 8)
 				y1 = math.ceil(y1 - 20)
 		if distance1 > distance2 and alpha_robot != numpy.pi / 2 and alpha_robot != 3*numpy.pi / 2:	
 			if alpha_line == numpy.pi / 2:
