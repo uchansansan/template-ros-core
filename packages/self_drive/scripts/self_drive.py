@@ -31,7 +31,7 @@ class Controller:
 		self.last_time_stamp = 0
 		self.mutex = threading.Lock()
 		rospy.init_node('self_drive')
-l		self.istener = rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
+		self.listener = rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
 
 	def run_dyty_cycle(self, time_stamp, info):
 		rospy.loginfo('%s',str("dyty_cycle"))
