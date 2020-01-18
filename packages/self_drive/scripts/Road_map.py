@@ -1,3 +1,4 @@
+import rospy
 class Roadmap():
 	def  __init__(self, read_img, x, y):
 		#parse_map_img(read_img)
@@ -8,6 +9,7 @@ class Roadmap():
 	def getTangent(self):
 		return 0,1,0,3
 	def setTrace(self, time, alpha_robot, last_v, v):
+		rospy.loginfo('%s',str("setTrace-ALLAH"))
 		x_line1,x_line1,x_line2,y_line2 = getTangent()
 		alpha_line = (y_line1 - y_line2) / (x_line1 - x_line2)
 		distance1 = last_v
@@ -69,4 +71,5 @@ class Roadmap():
 
 
 	def getTrace():
+		rospy.loginfo('%s',str("getTrace-ALLAH"))
 		return self.img
