@@ -1,6 +1,7 @@
 import rospy
 import numpy
 import cv2 as cv
+import math
 class Roadmap():
 	def  __init__(self, read_img, x, y):
 		#parse_map_img(read_img)
@@ -40,34 +41,34 @@ class Roadmap():
 				y1 = y1 - 20
 		if distance1 > distance2:	
 			if alpha_line == numpy.pi / 2:
-				distance3 = (distance1-distance2) / sin(alpha_robot)
-				x2 = distance3 * cos(alpha_robot)
-				y2 = distance3 * sin(alpha1)
+				distance3 = (distance1-distance2) / math.sin(alpha_robot)
+				x2 = distance3 * math.cos(alpha_robot)
+				y2 = distance3 * math.sin(alpha1)
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 + round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
 				distance1 = distance2
 			else:
-				distance3 = (distance1-distance2) / sin(alpha_robot)
-				x2 = distance3 * sin(alpha_robot)
-				y2 = distance3 * cos(alpha_robot)
+				distance3 = (distance1-distance2) / math.sin(alpha_robot)
+				x2 = distance3 * math.sin(alpha_robot)
+				y2 = distance3 * math.cos(alpha_robot)
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
 				distance1 = distance2
 		if distance1 < distance2:
 			if alpha_line == numpy.pi / 2:
-				distance3 = (distance2-distance1) / sin(alpha_robot)
-				x2 = distance3 * cos(alpha_robot)
-				y2 = distance3 * sin(alpha_robot)
+				distance3 = (distance2-distance1) / math.sin(alpha_robot)
+				x2 = distance3 * math.cos(alpha_robot)
+				y2 = distance3 * math.sin(alpha_robot)
 				cv.line(img, (x1, y1), (x1 + round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 + round(x2)
 				y1 = y1 - round(y2)
 				distance1 = distance2
 			else:	
-				distance3 = (distance2-distance1) / sin(alpha_robot)
-				x2 = distance3 * sin(alpha_robot)
-				y2 = distance3 * cos(alpha_robot)
+				distance3 = (distance2-distance1) / math.sin(alpha_robot)
+				x2 = distance3 * math.sin(alpha_robot)
+				y2 = distance3 * math.cos(alpha_robot)
 				cv.line(img, (x1, y1), (x1 - round(x2), y1 - round(y2)), (255, 0, 0), 2)
 				x1 = x1 - round(x2)
 				y1 = y1 - round(y2)
