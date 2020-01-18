@@ -24,7 +24,7 @@ class Roadmap():
 		distance1 = int(math.ceil(last_v))
 		distance2 = int(math.ceil(v))
 		if alpha_robot == numpy.pi / 2:
-			if (abs(alpha_line) == numpy.pi / 2) and (abs(alpha_line) == 3*numpy.pi / 2):
+			if (abs(alpha_line) == numpy.pi) and (abs(alpha_line) == 0):
 				cv.line(img, ( int(math.ceil(x1)), int(math.ceil(y1)) ), ( int(math.ceil(x1)), int(math.ceil(y1 + distance1 - distance2)) ), (255, 0, 0), 2)
 				
 				y1 = int(math.ceil(y1)) + distance1 - distance2
@@ -38,13 +38,13 @@ class Roadmap():
 				distance1 = int(math.ceil(distance2))
 		else: 
 			if distance1 == distance2:
-				if (abs(alpha_line) == numpy.pi / 2) and (abs(alpha_line) == 3*numpy.pi / 2):
+				if (abs(alpha_line) == numpy.pi) and (abs(alpha_line) == 0):
 					cv.line(img, (x1, y1), (x1 + 20, y1), (255, 0, 0), 2)
 					x1 = int(math.ceil(x1 + 20))
 			else:
 				cv.line(img, ( int(math.ceil(x1)), int(math.ceil(y1)) ), ( int(math.ceil(x1)), int(math.ceil(y1 - 20)) ), (255, 0, 0), 2, 8)
 				y1 = int(math.ceil(y1 - 20))
-		if (distance1 > distance2) and (abs(alpha_robot) != numpy.pi / 2) and (abs(alpha_robot) != 3*numpy.pi / 2):	
+		if (distance1 > distance2) and (abs(alpha_robot) != numpy.pi) and (abs(alpha_robot) != 0):	
 			if alpha_line == numpy.pi / 2:
 				distance3 = int(math.ceil( (distance1-distance2) / math.sin(alpha_robot) ))
 				x2 = int(math.ceil(distance3 * math.cos(alpha_robot)))
@@ -61,8 +61,8 @@ class Roadmap():
 				x1 = int(math.ceil(x1 + round(x2)))
 				y1 = int(math.ceil(y1 - round(y2)))
 				distance1 = int(math.ceil(distance2))
-		if (distance1 < distance2) and (abs(alpha_robot) != numpy.pi / 2) and (abs(alpha_robot) != 3*numpy.pi / 2):
-			if (alpha_line == numpy.pi / 2) and (alpha_robot != numpy.pi / 2):
+		if (distance1 < distance2) and (abs(alpha_robot) != numpy.pi) and (abs(alpha_robot) != 0):
+			if (alpha_line == numpy.pi) and (alpha_robot != 0):
 				distance3 = int(math.ceil( (distance2-distance1) / math.sin(alpha_robot) ))
 				x2 = int(math.ceil(distance3 * math.cos(alpha_robot)))
 				y2 = int(math.ceil(distance3 * math.sin(alpha_robot)))
@@ -70,7 +70,7 @@ class Roadmap():
 				x1 = int(math.ceil(x1 + round(x2)))
 				y1 = int(math.ceil(y1 - round(y2)))
 				distance1 = int(math.ceil(distance2))
-			elif (abs(alpha_robot) != numpy.pi / 2) and (abs(alpha_robot) != 3*numpy.pi / 2):	
+			elif (abs(alpha_robot) != numpy.pi) and (abs(alpha_robot) != 0):	
 				distance3 = int(math.ceil((distance2-distance1) / math.sin(alpha_robot)))
 				x2 = int(math.ceil(distance3 * math.sin(alpha_robot)))
 				y2 = int(math.ceil(distance3 * math.cos(alpha_robot)))
