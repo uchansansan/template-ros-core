@@ -15,19 +15,19 @@ class Roadmap():
 		distance1 = last_v
 		distance2 = v
 		if alpha_robot == numpy.pi / 2:
-		if alpha_line == numpy.pi / 2:
-			cv.line(img, (x1, y1), (x1, y1 + distance1 - distance2), (255, 0, 0), 2)
-			y1 = y1 + distance1 - distance2
-			distance1 = distance2
-		else:
-			cv.line(img, (x1, y1), (x1 + distance1 - distance2, y1), (255, 0, 0), 2)
-			x1 = x1 + distance1 - distance2
-			distance1 = distance2
-	else: 
-		if distance1 == distance2:
 			if alpha_line == numpy.pi / 2:
-				cv.line(img, (x1, y1), (x1 + 20, y1), (255, 0, 0), 2)
-				x1 = x1 + 20
+				cv.line(img, (x1, y1), (x1, y1 + distance1 - distance2), (255, 0, 0), 2)
+				y1 = y1 + distance1 - distance2
+				distance1 = distance2
+			else:
+				cv.line(img, (x1, y1), (x1 + distance1 - distance2, y1), (255, 0, 0), 2)
+				x1 = x1 + distance1 - distance2
+				distance1 = distance2
+		else: 
+			if distance1 == distance2:
+				if alpha_line == numpy.pi / 2:
+					cv.line(img, (x1, y1), (x1 + 20, y1), (255, 0, 0), 2)
+					x1 = x1 + 20
 			else:
 				cv.line(img, (x1, y1), (x1, y1 - 20), (255, 0, 0), 2)
 				y1 = y1 - 20
