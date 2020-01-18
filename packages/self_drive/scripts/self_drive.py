@@ -43,9 +43,9 @@ class Controller:
 	 	self.road_map.setTrace(time_stamp - self.last_time_stamp, self.last_step_info.omega, self.last_step_info.v, info.v)
 	 	self.last_time_stamp = time_stamp
 	 	self.last_step_info = info
-		mutex.acquire()
+		self.mutex.acquire()
 	 	self.gui.redraw(self.road_map)
-		mutex.release()
+		self.mutex.release()
 
 
 
