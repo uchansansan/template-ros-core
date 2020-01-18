@@ -13,7 +13,7 @@ class Roadmap():
 		return 0,1,0,3
 	def setTrace(self, time, alpha_robot, last_v, v):
 		rospy.loginfo('%s',str("setTrace-ALLAH"))
-		rospy.loginfo('%s',str(img.shape))
+		rospy.loginfo('%s',str(self.img.shape))
 		img = self.img
 		x_line1,y_line1,x_line2,y_line2 = self.getTangent()
 		x1= int(250)
