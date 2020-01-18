@@ -25,8 +25,7 @@ class Controller:
 		self.road_map = Roadmap(read_img,x=0,y=0)
 		self.gui = GUI()
 		self.first = True
-		rospy.init_node('self_drive')
-		self.listener = rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
+
 		self.mutex = threading.Lock()
 
 	def run_dyty_cycle(self, time_stamp, info):
@@ -45,8 +44,9 @@ class Controller:
 
 
 
-read_img = cv.imread('graph.jpg',1)
-controller = Controller(read_img)
-
+#read_img = cv.imread('graph.jpg',1)
+#controller = Controller(read_img)
+rospy.init_node('self_drive')
+listener = rospy.Subscriber('/autobot03/car_cmd_switch_node/cmd', Twist2DStamped, RobotListener)
 
 rospy.spin()
