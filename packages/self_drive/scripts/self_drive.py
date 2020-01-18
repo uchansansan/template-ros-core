@@ -10,7 +10,7 @@ current_milli_time = lambda: int(round(time.time()*1000))
 
 def RobotListener(msg):
 	#global controller 
-	rospy.loginfo('MESSAGE %s',str(msg))
+	#rospy.loginfo('MESSAGE %s',str(msg))
 	#controller.run_dyty_cycle(current_milli_time(), RobotInfo(msg.v, msg.omega))
 
 
